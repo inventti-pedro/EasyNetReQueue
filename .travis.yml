@@ -5,5 +5,13 @@ go:
 
 script: go get github.com/streadway/amqp && go build .
 
+deploy:
+  provider: releases
+  api_key: "$GH_TOKEN"
+  file: "EasyNetRequeue.exe"
+  skip_cleanup: true
+  on:
+    tags: true
+
 notifications:
     email: true
