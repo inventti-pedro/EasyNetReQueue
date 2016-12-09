@@ -1,0 +1,9 @@
+language: go
+
+go: 
+    - master
+
+script: go get github.com/streadway/amqp && go build .
+
+notifications:
+    email: true
